@@ -1,0 +1,59 @@
+.seccion4 {
+    min-height: 250dvh;
+    background-image: url(../../Image/descarga.jfif);
+    background-size: 100%;
+    background-repeat: round;
+    background-attachment: fixed;
+}
+
+.seccion {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #000000a3;
+}
+
+.cuadro {
+    width: 500px;
+    height: 300px;
+    background-color: #3498db;
+    color: white;
+    justify-content: center;
+    border-radius: 15px;
+    opacity: 0;
+    transform: scale(0.8);
+    position: absolute;
+}
+
+.cuadro h1 {
+    text-align: center;
+    font-size: 30px;
+    height: fit-content;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.cuadro p {
+    font-size: 20px;
+    padding: 0px 30px;
+}
+/* MediaQuery */
+@media (width <= 550px) {
+    
+.seccion {
+   overflow: hidden;
+}
+.cuadro {
+    width: 350px;
+    height: 500px;
+}
+.cuadro h1 {
+    font-size: 25px;
+}
+
+.cuadro p {
+    font-size: 18px;
+}
+  }

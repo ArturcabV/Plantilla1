@@ -1,0 +1,36 @@
+/* Seccion inicio */
+.seccion1{
+    height: 100dvh;
+    background-image: url(../../Image/FondoP.jpg);
+    background-size: 100% 100dvh;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+}
+.seccion1 div:nth-child(1){
+    height: 85dvh;
+    width: 100%;
+    margin: auto;
+    border-radius: 195px 50px 195px 30px;
+    background:linear-gradient(90deg, rgb(0 0 0 / 13%) 0%, rgb(104 94 94 / 63%) 51%, rgb(0 0 0 / 43%) 100%);
+
+}
+.seccion1 div h1:nth-child(1){
+    color: #ffffff;
+    font-size: 8dvh;
+    line-height: 1.333;
+    width: 100%;
+    padding: calc(10% - 60px);
+}
+
+
+/* Mddiaquery */
+@media (width <= 550px) {
+    /* seccion1 */
+    .seccion1 div h1:nth-child(1){
+        font-size: 6dvh;
+        padding: 10%
+    }
+    .seccion1 div:nth-child(1){
+        border-radius: 20px;
+    }
+  }

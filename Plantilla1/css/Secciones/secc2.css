@@ -1,0 +1,45 @@
+/* seccion 2 */
+  .seccion2{
+    height: 100dvh;
+    background-image: url(../../Image/Fondo2.jpg);
+    background-size: 100% 100dvh;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+}
+.seccion2 div:nth-child(1){
+    height: 85dvh;
+    width: 100%;
+    margin: auto;
+    border-radius: 195px 50px 195px 30px;
+    background: linear-gradient(90deg, rgb(0 0 0 / 13%) 0%, rgb(0 0 0 / 71%) 51%, rgb(0 0 0 / 43%) 100%);
+}
+.seccion2 div h1:nth-child(1){
+    color: #ffffff;
+    font-size: 45px;
+    line-height: 1.333;
+    text-align: center;
+    padding: 50px;
+}
+.seccion2 div p:nth-child(2){
+    color: #ffffff;
+    font-size: calc(30px - 7px);
+    line-height: 1.333;
+    text-align: center;
+    padding: calc(50px - 25px);
+}
+/* MediaQuery */
+@media (width <= 550px) {
+/* seccion2 */
+    .seccion2 div:nth-child(1){
+        border-radius: 20px;
+    }
+    .seccion2 div h1:nth-child(1){
+        font-size: 6dvh;
+        text-align: center;
+        padding: 10px;
+    }
+    .seccion2 div p:nth-child(2){
+        font-size: 3dvh;
+        padding: 15px;
+    }
+  }
