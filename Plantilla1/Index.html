@@ -11,6 +11,7 @@
     <link href="css/Secciones/secc2.css" rel="stylesheet" />
     <link href="css/Secciones/secc3.css" rel="stylesheet" />
     <link href="css/Secciones/secc4.css" rel="stylesheet" />
+    <link href="css/Secciones/secc5.css" rel="stylesheet" />
     
     <!-- Animaciones -->
     <link href="css/Animaciones.css" rel="stylesheet">
@@ -46,8 +47,11 @@
                          <li class="nav-item">
                             <a class="nav-link" href="#seccion3">Seccion 3</a>
                         </li>
-                         <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="#seccion4">Seccion 4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#seccion5">Seccion 5</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -231,6 +235,30 @@
             </div>
         </div>
     </seccion>
+    <seccion id="seccion5">
+        <div class="zona" id="zonaMouse">
+            <div class="square"></div>
+            <div class="cartas">
+                <div class="col-12 text-center">
+                    <h1>Titulo inicial</h1>
+                </div>
+                <div class="col-6 secciones-conte">
+                    <div class="reveal-zone">
+                        <div class="mensaje">
+                            subtitulos
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 secciones-conte">
+                    <div class="reveal-zone">
+                        <div class="mensaje">
+                            subtitulos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </seccion>
 </body>
 <footer>
 
@@ -239,6 +267,32 @@
     <script src="js/Animaciones.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="js/AnimacionSecc4.js"></script>
+    <script>
+        const zona = document.getElementById('zonaMouse');
+        const square = zona.querySelector('.square');
+
+        zona.addEventListener('mousemove', (e) => {
+            const rect = zona.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            let y = e.clientY - rect.top;
+
+            anime({
+                targets: square,
+                left: x + 'px',
+                top: y + 'px',
+                duration: 400,
+                easing: 'easeOutExpo'
+            });
+        });
+
+        zona.addEventListener('mouseleave', (e) => {
+            anime({
+                targets: square,
+                duration: 500,
+                easing: 'easeOutBack'
+            });
+        });
+    </script>
 </footer>
 
 </html>
