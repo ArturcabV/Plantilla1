@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de 1 minuto</title>
+   <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        #contenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #contador {
+            font-size: 125px;
+            font-weight: bold;
+            color: #333;
+        }
+        #imagen {
+            margin-top: 20px;
+            max-width: 180;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="contador"></div>
+        <img id="imagen" alt="logo" src="https://industriasionet.sharepoint.com/sites/IntranetIONET/MKT/Industrias%20IONET%20Mxico/MANUAL%20DE%20MARCA%20IONET/2025/LOGOS%20ACTUALIZADOS/IMAGOTIPO%20NEGRO%20-%20VERDE.png?csf=1&web=1&e=b164Rh&CID=9d5dbc26-c092-46bb-bf15-85c8d827beea"/>
+    </div>
+
+    <script>
+        let tiempoRestante = 300; // Tiempo en segundos (1 minuto)
+
+        function actualizarContador() {
+            let minutos = Math.floor(tiempoRestante / 60);
+            let segundos = tiempoRestante % 60;
+            segundos = segundos < 10 ? '0' + segundos : segundos;
+            document.getElementById("contador").textContent = `${minutos}:${segundos}`;
+            tiempoRestante--;
+
+            if (tiempoRestante < 0) {
+                clearInterval(intervalo);
+                document.getElementById("contador").textContent = "¡Tiempo!";
+            }
+        }
+
+        actualizarContador(); // Mostrar el tiempo inicial inmediatamente
+        let intervalo = setInterval(actualizarContador, 1000);
+    </script>
+</body>
+</html>
